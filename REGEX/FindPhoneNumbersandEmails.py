@@ -26,6 +26,10 @@ emailRegex = re.compile(r'''
 match4email = emailRegex.findall(text)
 match4number = PhoneNumberRegex.findall(text)
 
-for i, (email, number) in enumerate(zip(match4email, match4number), start=1):
-    print(f'{i}. Email: {email}, {i}. phone number: {number}')
+for i, email in enumerate(match4email, start=1):
+    print(f'{i}. email: {email}')
     
+print("-"*40)    
+for i, number in enumerate(match4number, start=1):
+    print(f'{i}. Phone number: {number}')
+
